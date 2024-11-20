@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "CategoryManagement";
+}
+<div class="row">
+    <div class="col-6">
+        @using (Html.BeginForm("CreateCategory", "Category", FormMethod.Post))
+        {
+            <div class="card">
+                <div class="card-body align-content-center">
+                    <h3 class="heading text-center bg-dark text-light">Create Category</h3>
+                    <div class="mb-2">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="CategoryName" />
+                    </div>
+                    <div class="mb-2">
+                        <label>Discription</label>
+                        <textarea class="form-control" name="CategoryDescription"></textarea>
+                    </div>
+                    <div class="mb-2">
+                        <label>Image</label>
+                        <input class="form-control" type="file" name="CategoryImage"/>
+                    </div>
+
+                    <div class="mb-2">
+                        <button class="btn btn-outline-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
